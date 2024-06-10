@@ -6,3 +6,4 @@ for i in range(n):
     else:
       print(' ' , end=' ')
   print()
+
