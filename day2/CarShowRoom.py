@@ -9,8 +9,6 @@ carmodels = { 1 : "1.BMW-M4 \n2.BMW-M5" , 2:"1.M-300c \n2.M-60Z"}
 carmodelprice = { 1:{1:5400 , 2:9100 }, 2: { 1:8900 , 2: 9000} }
 varient = ['petrol', 'diesel'];
 
-#price = self.carmodprice[ch][mch]
-
 
 class carShowRoom:
   def __init__(self,carcampany,carmodels,carmodelprice) -> None:
