@@ -1,13 +1,12 @@
-n=7645 # using recursion  , sum of the digits
+# using recursion  , sum of the digits
+n=int(input("enter the number :"))
 
 
 def sumOfDigits(n):
   if n==0:
     return 0
   else:
-    i = n%10
-    n = n//10
-    return i + sumOfDigits(n)
+    return n%10 + sumOfDigits(n//10)
   
 res =sumOfDigits(n)
 print(res)
