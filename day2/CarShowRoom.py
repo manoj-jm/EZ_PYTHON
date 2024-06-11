@@ -13,7 +13,6 @@ varient = ['petrol', 'diesel'];
 
 
 class carShowRoom:
-  
   def __init__(self,carcampany,carmodels,carmodelprice) -> None:
     print("Welcome")
     print("carshowroom :\n1.BMW \n2.Mercedes")
