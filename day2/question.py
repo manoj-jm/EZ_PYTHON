@@ -1,2 +1,3 @@
 #find next greather value for every element 
-#[14,2,16,4,3,5]=>[16,16,-1,5,-1,-1] using stacks
+#[14,2,16,4,3,5]=>[-1,-1,1,1,-1,1] using stacks
+
