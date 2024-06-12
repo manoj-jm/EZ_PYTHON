@@ -1,26 +1,16 @@
 import os
 
-s = ''
-with open("newFile.txt", 'r+') as f:
-  data = f.readline().strip().split( ' ')
-  for i in data :
-    if i != 'bellary':
-      # print(i,end=' ')
-      if (i == '\n'):
-        s+='\n'
-      s+=i+' '
-    else:
 
-      l = 'bitm'
-      if (i == '\n'):
-        s+='\n'
-      s+=l+' '
-      # print(l, end=' ')
+with open("newFile.txt", 'r+b') as f:
+  print(f.tell())
 
-print(s)
-with open('newFile.txt', 'w') as fr:
-  fr.write(s)
-      
+  f.seek(-32,2)# 2 is the 3rd line last character
+  print(f.tell())
+  f.write(b"bitm   ")
+  print(f.read().decode('utf-8'))
+  f.close()
+  
+
 
   
 
