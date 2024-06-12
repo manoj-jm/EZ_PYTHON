@@ -19,3 +19,7 @@ collection of python , some fundamentals , funcitons
 * abstraction : providing a framework for which modification can be done without effecting the core   technology and there bg framework details is hidden
 
 *distructor work: deallocation of object , before , the garbage collector should delete the data and then distructor will empty the memory space .
+
+# day3
+
+* files and its modes
