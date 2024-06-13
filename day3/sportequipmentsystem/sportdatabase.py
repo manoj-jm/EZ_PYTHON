@@ -40,8 +40,8 @@ def update_status():
         for line in lines:
             parts = line.strip().split('|')
             if parts[0] == eid_to_find:
-                parts[1] = new_name  # Update the status
-            updated_lines.append('|'.join(parts) + '\n')
+                parts[3] = new_name  # Update the status
+            updated_lines.insert(4,'|'.join(parts) + '\n')
         with open('sportequipment.txt', 'w') as fn:
             fn.writelines(updated_lines)  # Write updated lines back to the file
             return

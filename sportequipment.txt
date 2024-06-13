@@ -1,2 +1,2 @@
-b01|better|A
-b02|good|NA
+b01|bat|good|NA
+b02|bat|better|A
