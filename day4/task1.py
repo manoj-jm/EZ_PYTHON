@@ -11,38 +11,19 @@ class Student:
     self.grade = None
 
   def updateMarks(self):
-    # m1 = int(input("enter the marks of sub1 : "))
-    # m2 = int(input("enter the marks of sub2 : "))
-    # m3 = int(input("enter the marks of sub3 : "))
-    # m4 = int(input("enter the marks of sub4 : "))
-    # m5 = int(input("enter the marks of sub5 : "))
-    # self.Mark.insert(0,m1)
-    # self.Mark.insert(1,m2)
-    # self.Mark.insert(2,m3)
-    # self.Mark.insert(3,m4)
-    # self.Mark.insert(4,m5)
     for i in range(0,5):
       m4 = int(input(f"enter the marks of sub{i+1} : "))
       self.Mark.insert(i,m4)
-    
-    
-    # marks[self.usn] = self.Mark
+
     
   def display(self):
     print(f"Name\t\t|USN\t|s1  |s2  |s3  |s4  |s5 |Percentage |Grade |")
-    # print(self.name , end='\t\t|')
-    # print(self.usn , end='\t|')
     l = [str(ele) for ele in  self.marks[self.usn]]
     dis = '  |'.join(l)
-    print(f"{self.name}\t\t|{self.usn}\t|{dis} |{self.percentage}\t|{self.grade}\t|")
-    if self.Mark == []:
-      # print('\t | \t|\t |\t |\t |',end=' ')
-      print(f"{self.name}\t\t|{self.usn}\t|  |  |  |  |  |{self.percentage}\t|{self.grade}\t|")
-
-    # print(dis , end=' |')
-    # self.percent()
-    # print(self.percentage,end=' |')
-    # print(self.grade,end=' |')
+    self.percent()
+    print(f"{self.name}\t\t|{self.usn}\t|{dis} |{self.percentage}\t    |{self.grade}\t|")
+    # if self.Mark == []:
+    #   print(f"{self.name}\t\t|{self.usn}\t|  |  |  |  |  |{self.percentage}\t|{self.grade}\t|")
 
   def percent(self):
     self.percentage = (sum(self.Mark) / 500 )*100
