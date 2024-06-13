@@ -26,12 +26,30 @@ class Sports:
       print("1.barrow 2.return")
       inpu = int(input())
       match(inpu):
-        case 3:update_barrow()  
-        case 4:update_return()
+        case 1:update_barrow()  
+        case 2:update_return()
         case _ : break 
 
-  def sportEquipmentTracking():
-    display()
+  def sportEquipmentTracking(self):
+    try:
+      print("Sport Equipment Details")
+      with open('sportequipment.txt','r') as fs:
+        data = fs.read()
+        # l =[str(ele) for ele in data] #to print in the form of string not in list 
+        # dis = ' |'.join(l)
+        print(data)
+
+      print("\nSport Equipment Tracking")
+      with open('rentaldatabase.txt','r') as f:
+        data = f.readlines()
+        print("usn|eid|name|time_barrowed|time_returned")
+        l = [str(ele) for ele in  data]
+        dis = ' |'.join(l)
+        print(dis)
+
+      
+    except Exception as error :
+      print(error)
     return
         
 obj = Sports()

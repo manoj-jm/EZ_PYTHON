@@ -9,10 +9,9 @@ def update_barrow():
             eid = input("Enter the equipment ID: ")
             name = input("Enter name: ")
             time_barrow = dt.datetime.now().time() # we can change the time() to date() also
-            time_return = '-'
-            
-            s = f"{usn}|{eid}|{name}|{time_barrow}|{time_return}"
+            s = f"{usn}|{eid}|{name}|{time_barrow}"
             fs.write(s)
+            print("Barrow sucessfull !")
     except Exception as e:
         print(f"An error occurred: {e}")
 
@@ -24,13 +23,12 @@ def update_return():
 
         eid_to_find = input("Enter the eid to update: ")
        
-
         updated_lines = []
         for line in lines:
             parts = line.strip().split('|')
             if parts[1] == eid_to_find:
-                parts[4] = dt.datetime.now().time() # Update the name
-            updated_lines.append('|'.join(parts) + '\n')
+                parts[4] = str(dt.datetime.now().time()) # Update the name
+            updated_lines.append("|".join(parts) + '\n')
 
         with open('rentaldatabase.txt', 'w') as fn:
             fn.writelines(updated_lines)  # Write updated lines back to the file
