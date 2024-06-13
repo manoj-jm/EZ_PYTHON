@@ -17,14 +17,16 @@ class Student:
 
     
   def display(self):
-    print(f"Name\t\t|USN\t|s1  |s2  |s3  |s4  |s5 |Percentage |Grade |")
-    l = [str(ele) for ele in  self.marks[self.usn]]
-    dis = '  |'.join(l)
+    # print(f"Name\t\t|USN\t|s1  |s2  |s3  |s4  |s5 |Percentage |Grade |")
+    # l = [str(ele) for ele in  self.marks[self.usn]]
+    # dis = '  |'.join(l)
     self.percent()
-    print(f"{self.name}\t\t|{self.usn}\t|{dis} |{self.percentage}\t    |{self.grade}\t|")
-    # if self.Mark == []:
-    #   print(f"{self.name}\t\t|{self.usn}\t|  |  |  |  |  |{self.percentage}\t|{self.grade}\t|")
-
+    print("name : ",self.name)
+    print("usn : ",self.usn)
+    for i in range(0,len(self.Mark)):
+      print(f"subject{i+1}",self.Mark[i])
+    print(f"percentage : {self.percentage:.2f} ")
+    print("grade : ",self.grade)
   def percent(self):
     self.percentage = (sum(self.Mark) / 500 )*100
     if self.percentage <=100 and self.percentage >81:
