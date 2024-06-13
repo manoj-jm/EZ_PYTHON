@@ -50,8 +50,7 @@ while True:
       s.updateMarks()
     case 3:
       s.display()
-    case 4:
-      s.deletestd()
+
     
       
       
