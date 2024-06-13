@@ -36,9 +36,6 @@ class Student:
     elif self.percentage>0 and self.percentage<=35:
       self.grade = 'F'
     return self.percentage
-  
-
-    
 
 
 
@@ -53,6 +50,8 @@ while True:
       s.updateMarks()
     case 3:
       s.display()
+    case 4:
+      s.deletestd()
     
       
       
