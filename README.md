@@ -16,10 +16,14 @@ collection of python , some fundamentals , funcitons
 
 * encapsulation : binding the data mem and mem function into a single unit .
 
-* abstraction : providing a framework for which modification can be done without effecting the core   technology and there bg framework details is hidden
+* abstraction : providing a framework for which modification can be done without effecting the core technology and there bg framework details is hidden
 
-*distructor work: deallocation of object , before , the garbage collector should delete the data and then distructor will empty the memory space .
+\*distructor work: deallocation of object , before , the garbage collector should delete the data and then distructor will empty the memory space .
 
 # day3
 
-* files and its modes
+- files and its modes
+
+# day4
+
+- sport equipment system
