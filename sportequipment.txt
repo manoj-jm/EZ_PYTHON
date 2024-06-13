@@ -1,0 +1,2 @@
+b01|better|A
+b02|good|NA

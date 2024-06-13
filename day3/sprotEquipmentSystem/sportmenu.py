@@ -1,64 +1,47 @@
-import os
-import datetime as dt
+from Renting import *
+from sportdatabase import *
 
 class Sports:
   def __init__(self) -> None:
-    self.eid = 0
+    pass
+
   def sportEquipmentDetails(self):
-    print("Equipment Details")
-    print("1.entry\n2.read")
-    def entry():
-      with open('sportequipment.txt','wb') as fw : 
-        self.eid = input("enter equipment id : ")
-        ename = input("enter equipment name : ")
-        econdition = input("enter equipment condition : ")
-        estatus = input("enter equipment id : ")
-        d = f'{self.eid},{ename},{econdition},{estatus}'
-        fw.write(d.encode())
-
-    def read():
-      with open('sprotequipment.txt','r') as fr:
-        fr.read();
-        
-
-    while True : 
-      sch = int(input("enter choice : "))
-      match(sch):
-        case 1: entry()
-        case 2: read()
+    print("\nEquipment Details")
+    while True:
+        print("Sport Database ")
+        print("1.entryEquipment\n2.readEquipment\n3.delete(defected)\n4.update_status\nchoice : ")
+        inpu = int(input())
+        match(inpu):
+          case 1:appendcontent()
+          case 2:display()  
+          case 3:delete()
+          case 4:update_status()
+          case _ :break
+          # case _ : print("invalid choice : press [cntrl + c] to exit or try-again :")
+          
 
   def sportEquipmentRenting(self):
-    print("Equipment Renting")
-    print("1.barrow\n2.return")
-    def barrow():
-      with open('studentequipment.txt','w') as fw : 
-        sname = input("enter equipment sname : ")
-        usn = input("enter equipment usn : ")
-        eid = self.eid # check here ? 
-        time_barrow = dt.datetime()
-        time_retrn = ''
-        d = f'{sname},{usn},{eid},{time_barrow},{time_retrn}'
-        fw.write(d.encode())
+    while True:
+      print("Renting tracking")
+      print("1.barrow 2.return")
+      inpu = int(input())
+      match(inpu):
+        case 3:update_barrow()  
+        case 4:update_return()
+        case _ : break 
 
-    def retrn():
-      usn = int(input("enter the usn of the student : "))
-      
-      with open('sprotequipment.txt','r') as fr:
-       
+  def sportEquipmentTracking():
+    display()
+    return
         
-
-         while True : 
-          sch = int(input("enter choice : "))
-          match(sch):
-            case 1: barrow()
-            case 2: retrn()
-
-
 obj = Sports()
+
 while True:
-  ch = int(input("enter the choice : 1.sport Equipment details\n2.sport Equipment Renting\n3.sport Equipment Tracking"))
+  print("Sport Equipment System")  
+  ch = int(input("1.sport Equipment details\n2.sport Equipment Renting\n3.sport Equipment Tracking\nenter the choice :"))
   match(ch):
     case 1: obj.sportEquipmentDetails()
     case 2: obj.sportEquipmentRenting()
     case 3: obj.sportEquipmentTracking()
     case _: break
+
