@@ -17,20 +17,18 @@ Input:
 Output:  
 4'''
 
-time_have = 240 # 4 hours
+
 prob = int(input("enter the no of problems : "))
 time= int(input("enter the time has(In minutes) less than 240min  : "))
-cnt = 0
-remaining = time_have - time 
+cnt = 1
+remaining = 240 - time 
 i=1;
-temp_time = remaining
-caltime =0
 while prob>0 :
-  rem_time = remaining - (i*5)
-  remaining = rem_time
+  rem = remaining - (i*5)
+  remaining = rem
   i+=1
   prob-=1
-  if(remaining<0):
+  if(remaining - (i*5)<0):
     break
   cnt+=1
 
