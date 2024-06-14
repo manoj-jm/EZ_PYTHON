@@ -32,14 +32,16 @@ class Sports:
 
   def sportEquipmentTracking(self):
     try:
-      print("Sport Equipment Details")
+      print("\nSport Equipment Details")
+      print("-------------------------------------------------------")
       with open('sportequipment.txt','r') as fs:
         data = fs.read()
         # l =[str(ele) for ele in data] #to print in the form of string not in list 
         # dis = ' |'.join(l)
         print(data)
 
-      print("\nSport Equipment Tracking")
+      print("Sport Equipment Tracking")
+      print("-------------------------------------------------------")
       with open('rentaldatabase.txt','r') as f:
         data = f.readlines()
         print("usn|eid|name|time_barrowed|time_returned")
