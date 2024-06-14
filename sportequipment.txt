@@ -1,2 +1,2 @@
-b01|bat|good|A
-b02|ball|good|A
+r001|Racket|Better|A
+f001|foot ball|Not Good|NA

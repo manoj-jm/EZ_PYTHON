@@ -2,12 +2,12 @@
 # sport equipment details
 def display():
     try:  
-        print('\n')
+        # print('\n')
         with open('sportequipment.txt','r') as file:
             data =file.readlines()
-            print("{eid}|{name}|{condition}|{status}")
+            print("eid|name|condition|status\n")
             for i in data:
-                print(i, end=' |')
+                print(i, end='|')
         print('\n')
         return 
     except Exception as e:
@@ -42,7 +42,7 @@ def update_status():
             data = ch.read().strip().split('|')
             eid_to_find = input("Enter the eid to update: ")
             for i in data:
-                if eid_to_find in i:
+                if eid_to_find not in i:
                     with open('sportequipment.txt', 'r') as fn:
                         lines = fn.readlines()  # Read all lines
                     # print("1.eid 2.name 3.condition 4.status")
@@ -56,6 +56,8 @@ def update_status():
                         updated_lines.insert(4,'|'.join(parts) + '\n')
                     with open('sportequipment.txt', 'w') as fn:
                         fn.writelines(updated_lines)  # Write updated lines back to the file
+                        print(f"equipment {eid_to_find} is updated !")
+
                         return
                 else:
                     print("eid is not exit :")
@@ -67,28 +69,27 @@ def update_status():
 
 def delete():
     try:
+        with open('sportequipment.txt','r') as ch:
+            data = ch.read().strip().split('|')
+            eid_to_remove = input("Enter the eid to remove: ")
+            for i in data:
+                if eid_to_remove == i:
+                    with open('sportequipment.txt', 'r') as fn:
+                        lines = fn.readlines()  # Read all lines
+                    if eid_to_remove not in lines:      
+                        updated_lines = []
+                        for line in lines:
+                            parts = line.strip().split('|')
+                            if parts[0] != eid_to_remove:
+                                updated_lines.append(line)  # Keep the line if eid does not match
 
-
-
-
-        with open('sportequipment.txt', 'r') as fn:
-            lines = fn.readlines()  # Read all lines
-
-        eid_to_remove = input("Enter the eid to remove: ")
-        if eid_to_remove in lines:
-                
-            updated_lines = []
-            for line in lines:
-                parts = line.strip().split('|')
-                if parts[0] != eid_to_remove:
-                    updated_lines.append(line)  # Keep the line if eid does not match
-
-            with open('sportequipment.txt', 'w') as fn:
-                fn.writelines(updated_lines)  # Write updated lines back to the file
-                return
-        else:
-            print("Entered eid is not exist !")
-            return
+                        with open('sportequipment.txt', 'w') as fn:
+                            fn.writelines(updated_lines)  # Write updated lines back to the file
+                            print(f"equipment {eid_to_remove} is deleted !")
+                            return
+                    else:
+                        print("Entered eid is not exist !")
+                        return
         
     except Exception as e:
         print(f"An error occurred: {e}")

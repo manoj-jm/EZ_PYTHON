@@ -9,8 +9,7 @@ def update_barrow():
             usn = input("Enter USN: ")
             for i in data:
                 if usn not in i:
-                    with open("rentaldatabase.txt", 'a') as fs:
-                        
+                    with open("rentaldatabase.txt", 'a') as fs:  
                         eid = input("Enter the equipment ID: ")
                         name = input("Enter name: ")
                         time_barrow = dt.datetime.now().time() # we can change the time() to date() also
