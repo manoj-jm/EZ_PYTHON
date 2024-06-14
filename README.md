@@ -29,3 +29,7 @@ collection of python , some fundamentals , funcitons
 - sport equipment system
 - bankAccount System
 
+# day5
+
+- This is why we say log2(8) = 3. The "log" helps us understand how many times we need to divide something by 2 to get a certain number. It's like a superpower of numbers that helps us understand how fast things grow or shrink!
+- PrimeKeys , diwali programs
