@@ -1,5 +1,2 @@
-b01|bat|good|NA
-b02|bat|better|A
-b012|basket ball|good|NA
-b02|bat|bad|A
+b01|bat|good|A
 b02|ball|good|A

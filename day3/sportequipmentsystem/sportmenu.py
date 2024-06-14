@@ -8,27 +8,27 @@ class Sports:
   def sportEquipmentDetails(self):
     print("\nEquipment Details")
     while True:
-        print("Sport Database ")
-        print("1.entryEquipment\n2.readEquipment\n3.delete(defected)\n4.update_status\nchoice : ")
+        print("\nSport Database ")
+        print("1.entryEquipment\n2.readEquipment\n3.delete(defected)\n4.update_status\n5.exit\nchoice : ")
         inpu = int(input())
         match(inpu):
           case 1:appendcontent()
           case 2:display()  
           case 3:delete()
           case 4:update_status()
-          case _ :break
+          case 5 :break
           # case _ : print("invalid choice : press [cntrl + c] to exit or try-again :")
           
 
   def sportEquipmentRenting(self):
     while True:
       print("Renting tracking")
-      print("1.barrow 2.return")
+      print("1.barrow 2.return 3.exit")
       inpu = int(input())
       match(inpu):
         case 1:update_barrow()  
         case 2:update_return()
-        case _ : break 
+        case 3 : break 
 
   def sportEquipmentTracking(self):
     try:
@@ -56,10 +56,10 @@ obj = Sports()
 
 while True:
   print("Sport Equipment System")  
-  ch = int(input("1.sport Equipment details\n2.sport Equipment Renting\n3.sport Equipment Tracking\nenter the choice :"))
+  ch = int(input("1.sport Equipment details\n2.sport Equipment Renting\n3.sport Equipment Tracking\n4.Exit\nenter the choice :"))
   match(ch):
     case 1: obj.sportEquipmentDetails()
     case 2: obj.sportEquipmentRenting()
     case 3: obj.sportEquipmentTracking()
-    case _: break
+    case 4: break
 
