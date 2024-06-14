@@ -20,17 +20,18 @@ Output:
 
 prob = int(input("enter the no of problems : "))
 time= int(input("enter the time has(In minutes) less than 240min  : "))
-cnt = 1
+cnt = 0
 remaining = 240 - time 
 i=1;
 while prob>0 :
-  rem = remaining - (i*5)
-  remaining = rem
-  i+=1
-  prob-=1
   if(remaining - (i*5)<0):
     break
-  cnt+=1
+  else:
+    rem = remaining - (i*5)
+    remaining = rem
+    i+=1
+    prob-=1
+    cnt+=1
 
 print(f"{cnt} problems is solved in given time !")
   
