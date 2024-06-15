@@ -35,6 +35,9 @@ for m in range(0,len(il)-k-1):
 
 print(max, il[pos:pos+k])
 
+# time complexity is O(n*k) 
+# we can use sliding window 
+
 
 
 
