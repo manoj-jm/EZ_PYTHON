@@ -29,7 +29,6 @@ for i in range(no_person):
 
 print(res_person)
 output.append(res_person)
-
 res = max(res_person.values())
 for i,j in res_person.items():
   if res == j:
