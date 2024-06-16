@@ -1,4 +1,4 @@
-#using  sliding window technique
+#using  sliding window technique , find the minimum no of cards to pick up to pair the match card
 cards = [3,4,2,3,3,5,2,4,7]
 min_value = {}
 min_distance = float('inf')
