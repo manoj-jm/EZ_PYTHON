@@ -1,3 +1,4 @@
+# pattern1
 for i in range(0,4):
   print('*'*4)
 
@@ -60,15 +61,14 @@ for i in range(1,6):
   for j in range(1,i+1):  
     if (i+j)%2 == 0:
       print(1 , end='')
-      # m=0
     else:
       print(0 , end='')
-      # m=1
   print('')
 
   
 
 #pattern12
+print(12 , end='\n')
 n=4
 space = 2 * (n -1)
 
@@ -125,3 +125,39 @@ for i in range(1,n+1):
   print('')
 
 # pattern 17
+n = 5
+
+for i in range(1,n+1):
+  for j in range(n-i):
+    print(" ",end=' ')
+  cp = 65
+  for j in range(i):
+    print(chr(cp),end=' ')
+    cp+=1
+  cp = cp - 2 # 2 letters backwords 
+  for j in range(i-1):
+    print(chr(cp),end=' ')
+    cp-=1
+  print('')
+
+'''
+You are given a number N and you have to print the given pattern:
+For N=3
+3 3 3 2 2 2 1 1 1
+3 3 2 2 1 1
+3 2 1
+'''
+N = 3
+n = 3
+# for i in range(n):
+#   for j in range(n,i,-1):
+#     for k in range(n):
+#       print(j,end=' ')
+#     print('')
+
+
+for i in range(n):
+        for j in range(n, i, -1):
+            for k in range(n):
+                print(j, end=" ")
+        print()
