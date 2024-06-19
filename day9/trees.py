@@ -26,6 +26,8 @@ def inorder(root):
   print(root.value)
   inorder(root.right)
 
+
+#level order / BSF
 def levelorder(root):
   q =[root]
   q.append(None)
@@ -123,7 +125,6 @@ def bottomview(root):
           queue.append(None)
       else:
       # If the horizontal distance is encountered for the first time
-        # if hd  in top_view_dict:
         top_view_dict[hd] = node.value
 
         # Move to the left child
@@ -137,6 +138,50 @@ def bottomview(root):
   for hd in sorted(top_view_dict):
       print(top_view_dict[hd], end=" ")
   
+def leftview(root): # sir's method 
+  if root is None:
+    return
+  q =[root]
+  q.append(None)
+  while len(q)>0:
+    curr = q.pop(0)
+    if curr == None:
+      if len(q)==0:
+        break
+      else:
+        print(q[0].value)
+        q.append(None)
+    else:
+      # if q[0] == None:
+      #   print(curr.value, end=  '')
+      # print(curr.value,end='')
+      if curr.left != None:
+        q.append(curr.left)
+      if curr.right !=None:
+        q.append(curr.right)
+
+def rightview(root): # sir's method 
+  if root is None:
+    return
+  q =[root]
+  q.append(None)
+  while len(q)>0:
+    curr = q.pop(0)
+    if curr == None:
+      if len(q)==0:
+        break
+      else:
+        print(q[-1].value)
+        q.append(None)
+    else:
+      # if q[0] == None:
+      #   print(curr.value, end=  '')
+      # print(curr.value,end='')
+      if curr.left != None:
+        q.append(curr.left)
+      if curr.right !=None:
+        q.append(curr.right)
+  
   
 
 if __name__ == "__main__":
@@ -148,6 +193,8 @@ if __name__ == "__main__":
   root.left.left = node(4)
   root.left.right = node(5)
 
+
+  root.left.left.left = node(55)
   root.right.left = node(6)
   root.right.right = node(7)
 
@@ -170,3 +217,7 @@ if __name__ == "__main__":
   top_view(root)
   print("\nbottom view")
   bottomview(root)
+  print("\nleft view")
+  leftview(root)
+  print('\nright veiw')
+  rightview(root)
