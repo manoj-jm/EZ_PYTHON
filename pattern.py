@@ -164,3 +164,22 @@ for i in range(n):
 
 
 #pattern 18
+# n = 6
+# revchr = 70
+# for i in range(n):
+#   for j in range(i):
+#     print(chr(revchr),end=' ')
+#     revchr+=1
+#   revchr-=1
+#   print('')
+
+n = 6
+revchr = 70
+for i in range(n):
+  rev = revchr
+  for j in range(i):
+    print(chr(rev),end=' ')
+    rev+=1
+  revchr-=1
+
+  print('')
