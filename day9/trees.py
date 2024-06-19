@@ -103,6 +103,42 @@ def top_view(root):
       print(top_view_dict[hd], end=" ")
 
 
+
+def bottomview(root):
+  if root is None:
+    return
+  top_view_dict = {}
+
+  # Queue to perform level order traversal
+  # It stores tuples of (node, horizontal_distance)
+  queue = [(root, 0)]
+
+  while queue:
+      node, hd = queue.pop(0)
+      if node == None:
+        if len(queue)==0:
+          break
+        else:
+          print()
+          queue.append(None)
+      else:
+      # If the horizontal distance is encountered for the first time
+        # if hd  in top_view_dict:
+        top_view_dict[hd] = node.value
+
+        # Move to the left child
+        if node.left:
+            queue.append((node.left, hd - 1))
+        # Move to the right child
+        if node.right:
+            queue.append((node.right, hd + 1))
+
+  # Extracting the bottom view nodes from the dictionary
+  for hd in sorted(top_view_dict):
+      print(top_view_dict[hd], end=" ")
+  
+  
+
 if __name__ == "__main__":
   root = node(1)
 
@@ -132,3 +168,5 @@ if __name__ == "__main__":
   leafnodes(root)
   print("\ntop view")
   top_view(root)
+  print("\nbottom view")
+  bottomview(root)
