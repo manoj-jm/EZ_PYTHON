@@ -163,3 +163,4 @@ for i in range(n):
         print()
 
 
+#pattern 18
