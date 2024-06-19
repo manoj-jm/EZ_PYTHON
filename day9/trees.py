@@ -81,18 +81,25 @@ def top_view(root):
 
   while queue:
       node, hd = queue.pop(0)
+      if node == None:
+        if len(queue)==0:
+          break
+        else:
+          print()
+          queue.append(None)
+      else:
 
       # If the horizontal distance is encountered for the first time
-      if hd not in top_view_dict:
-          top_view_dict[hd] = node.value
+        if hd not in top_view_dict:
+            top_view_dict[hd] = node.value
 
-      # Move to the left child
-      if node.left:
-          queue.append((node.left, hd - 1))
+        # Move to the left child
+        if node.left:
+            queue.append((node.left, hd - 1))
 
-      # Move to the right child
-      if node.right:
-          queue.append((node.right, hd + 1))
+        # Move to the right child
+        if node.right:
+            queue.append((node.right, hd + 1))
 
   # Extracting the top view nodes from the dictionary
   for hd in sorted(top_view_dict):
