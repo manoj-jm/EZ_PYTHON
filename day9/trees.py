@@ -71,7 +71,6 @@ def leafnodes(root):
 def top_view(root):
   if root is None:
         return
-
   # Dictionary to store the top view of the binary tree
   top_view_dict = {}
 
@@ -88,7 +87,6 @@ def top_view(root):
           print()
           queue.append(None)
       else:
-
       # If the horizontal distance is encountered for the first time
         if hd not in top_view_dict:
             top_view_dict[hd] = node.value
@@ -96,7 +94,6 @@ def top_view(root):
         # Move to the left child
         if node.left:
             queue.append((node.left, hd - 1))
-
         # Move to the right child
         if node.right:
             queue.append((node.right, hd + 1))
