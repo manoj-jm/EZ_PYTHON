@@ -156,13 +156,6 @@ n = 3
 #     print('')
 
 
-for i in range(n):
-        for j in range(n, i, -1):
-            for k in range(n):
-                print(j, end=" ")
-        print()
-
-
 #pattern 18
 # n = 6
 # revchr = 70
