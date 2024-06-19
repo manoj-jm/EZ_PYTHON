@@ -68,6 +68,36 @@ def leafnodes(root):
   if root.right!=None:
     leafnodes(root.right)
 
+def top_view(root):
+  if root is None:
+        return
+
+  # Dictionary to store the top view of the binary tree
+  top_view_dict = {}
+
+  # Queue to perform level order traversal
+  # It stores tuples of (node, horizontal_distance)
+  queue = [(root, 0)]
+
+  while queue:
+      node, hd = queue.pop(0)
+
+      # If the horizontal distance is encountered for the first time
+      if hd not in top_view_dict:
+          top_view_dict[hd] = node.value
+
+      # Move to the left child
+      if node.left:
+          queue.append((node.left, hd - 1))
+
+      # Move to the right child
+      if node.right:
+          queue.append((node.right, hd + 1))
+
+  # Extracting the top view nodes from the dictionary
+  for hd in sorted(top_view_dict):
+      print(top_view_dict[hd], end=" ")
+
 
 if __name__ == "__main__":
   root = node(1)
@@ -96,3 +126,5 @@ if __name__ == "__main__":
   print("\nheight of the tree :", depth(root))
   print("leaf nodes of tree : ")
   leafnodes(root)
+  print("\ntop view")
+  top_view(root)
