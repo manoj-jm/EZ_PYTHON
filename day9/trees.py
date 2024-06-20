@@ -152,9 +152,6 @@ def leftview(root): # sir's method
         print(q[0].value)
         q.append(None)
     else:
-      # if q[0] == None:
-      #   print(curr.value, end=  '')
-      # print(curr.value,end='')
       if curr.left != None:
         q.append(curr.left)
       if curr.right !=None:
@@ -173,10 +170,7 @@ def rightview(root): # sir's method
       else:
         print(q[-1].value)
         q.append(None)
-    else:
-      # if q[0] == None:
-      #   print(curr.value, end=  '')
-      # print(curr.value,end='')
+    else: 
       if curr.left != None:
         q.append(curr.left)
       if curr.right !=None:
