@@ -178,48 +178,25 @@ def rightview(root): # sir's method
   
   
 def zigzag(root):
-  s = []
-  q =[root]
-  q.append(None)
-  while len(q)>0:
-    curr = q.pop(0)
-    if curr == None:
-      if len(q)==0:
-        break
-      else:
-        print()
-        q.append(None)
-        s.append(None)
-    else:
-      print(curr.value,end='')
-      s.append(curr.value)
-      if curr.left != None:
-        q.append(curr.left)
-      if curr.right !=None:
-        q.append(curr.right)
+    if not root:
+        return []
 
-  print(s)
-  revstack = []
-  res = []
-  polarised = 0
-  for i in s:
-    if polarised == 0:
-      if i == None:
-        polarised *=1
-      else:
-        res.append(i)
-    else:
-      while i!=None:
-        revstack.append(i)
-        print(revstack)
-      else:
-        while len(revstack)==0:
-          res.append(revstack.pop())
+    result, temp, stack, flag = [], [], [root], 1
 
-        polarised *=0
-  print('zigzag')
-  print(res)
-
+    while stack:
+        level = []
+        for _ in range(len(stack)):
+            node = stack.pop(0)
+            level.append(node.value)
+            if node.left:
+                temp.append(node.left)
+            if node.right:
+                temp.append(node.right)
+        result.append(level[::flag])
+        stack = temp
+        temp = []
+        flag *= -1
+    return result
         
 
 
