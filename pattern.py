@@ -1,28 +1,37 @@
 # pattern1
+print("pattern 1")
+
 for i in range(0,4):
   print('*'*4)
 
 #pattern2
+print("pattern 2")
 for i in range(0,4+1):
   print("*"*i)
 
 #pattern3
+print("pattern 3")
+
 for i in range(1,4+1):
   for j in range(1,i+1):
     print(j,end=" ")
   print("")
 
 #pattern4
+print("pattern 4")
+
 for i in range(1,4+1):
   for j in range(1,i+1):
     print(i,end=' ')
   print('')
 
 #pattern5
+print("pattern 5")
 for i in range(5,0,-1):
   print("*"*i)
 
 #pattern6
+print("pattern 6")
 for i in range(5,0,-1):
   for j in range(1,i+1):
     print(j,end='')
@@ -30,11 +39,14 @@ for i in range(5,0,-1):
 
 
 # #pattern7
+print("pattern 7")
+
 n=5
 for i in range(n+1):
   print(" " * (n-i) + "*" * (2*i -1))
 
 #patter8
+print("pattern 8")
 n=5
 print('pattern 8 ')
 for i in range(n,0,-1):
@@ -42,6 +54,7 @@ for i in range(n,0,-1):
 
 
 # daimond 9
+print("pattern 9")
 for i in range(n):
   print(" " * (n-i) + "*" * (2*i -1))
 for i in range(n,0,-1):
@@ -49,6 +62,7 @@ for i in range(n,0,-1):
   
 
 #pattern 10
+print("pattern 10")
 for i in range(n):
   print("*"*i)
 for i in range(n,0,-1):
@@ -56,6 +70,7 @@ for i in range(n,0,-1):
 
 
 #pattern11
+print("pattern 11")
 m = 1
 for i in range(1,6):
   for j in range(1,i+1):  
@@ -68,10 +83,9 @@ for i in range(1,6):
   
 
 #pattern12
-print(12 , end='\n')
+print("pattern 12" , end='\n')
 n=4
 space = 2 * (n -1)
-
 # print(space)
 for i in range(1,n+1):
   for j in range(1,i+1):
@@ -86,6 +100,7 @@ for i in range(1,n+1):
   space-=2
 
 #pattern 13
+print("pattern 13")
 start = 1
 n = 5
 for i in range(n+1):
@@ -96,6 +111,7 @@ for i in range(n+1):
 
 
 #pattern 14
+print("pattern 14")
 n = 5
 for i in range(1,n+1):
   char = 65
@@ -104,6 +120,7 @@ for i in range(1,n+1):
     char+=1
   print()
 
+print("pattern 15")
 #pattern 15
 n = 5 
 print("\n")
@@ -114,8 +131,8 @@ for i in range(n,0,-1):
     ch+=1
   print('')
 
-
 #pattern 16
+print("pattern 16")
 n = 5
 c = 65 
 for i in range(1,n+1):
@@ -124,7 +141,9 @@ for i in range(1,n+1):
   c+=1
   print('')
 
+
 # pattern 17
+print("pattern 17")
 n = 5
 
 for i in range(1,n+1):
@@ -166,6 +185,7 @@ n = 3
 #   revchr-=1
 #   print('')
 
+print("pattern 18 a \n")
 n = 6
 revchr = 70
 for i in range(n):
@@ -177,7 +197,10 @@ for i in range(n):
 
   print('')
 
+
+
 #pattern 18
+print("pattern 18 b\n")
 n=4
 space = 2 * (n -1)
 
@@ -206,6 +229,50 @@ for i in range(1,n+1):
     print("*",end='')
   print('')
   space-=2
+
+
+
+#pattern 20
+print("pattern 20")
+n=4
+space = 2 * (n -1)
+N=4
+spc =0
+for i in range(1,n+1):
+  for j in range(1,i+1):
+    print("*",end='')
+
+  for k in range(space,0,-6):
+    print(" " * k ,end='')
+
+  for j in range(i,0,-1):
+    print("*",end='')
+  print('')
+  space-=2
+#second 
+for i in range(N,0,-1):
+  for j in range(i):
+    print("*",end='')
+  
+  for m in range(0,spc):
+    print(" ",end='')
+  
+  for j in range(i):
+    print("*",end='')
+  print("")
+  spc += 2
+
+
+#pattern 21
+print("pattern 21")
+num = 5
+for i in range(num):
+  for j in range(num):
+    if j==0 or i==0 or i==num-1 or j == num-1 :
+      print("*",end=' ')
+    else:
+      print(" ",end=' ')
+  print('')
 
 
 
