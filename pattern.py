@@ -178,31 +178,35 @@ for i in range(n):
   print('')
 
 #pattern 18
-print(18 , end='\n')
 n=4
 space = 2 * (n -1)
-for i in range(n,-1,-1):
-  for j in range(i,0,-1):
-    print(j,end='')
 
-  for k in range(0,spa,-6):
-    print(" " * k ,end='')
-
-  for j in range(i,0,-1):
-    print(j,end='')
-  print('')
-  space-=2
-
-  n=4
-space = 2 * (n -1)
+N=4
+spc =0
+for i in range(N,0,-1):
+  for j in range(i):
+    print("*",end='')
+  
+  for m in range(0,spc):
+    print(" ",end='')
+  
+  for j in range(i):
+    print("*",end='')
+  print("")
+  spc += 2
+#second thrown
 for i in range(1,n+1):
   for j in range(1,i+1):
-    print(j,end='')
+    print("*",end='')
 
   for k in range(space,0,-6):
     print(" " * k ,end='')
 
   for j in range(i,0,-1):
-    print(j,end='')
+    print("*",end='')
   print('')
   space-=2
+
+
+
+
