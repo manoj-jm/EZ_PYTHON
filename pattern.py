@@ -72,7 +72,7 @@ print(12 , end='\n')
 n=4
 space = 2 * (n -1)
 
-print(space)
+# print(space)
 for i in range(1,n+1):
   for j in range(1,i+1):
     print(j,end='')
@@ -176,3 +176,19 @@ for i in range(n):
   revchr-=1
 
   print('')
+
+#pattern 18
+print(18 , end='\n')
+n=4
+space = 2 * (n -1)
+for i in range(1,n+1):
+  for j in range(1,i+1):
+    print(j,end='')
+
+  for k in range(space,0,-6):
+    print(" " * k ,end='')
+
+  for j in range(i,0,-1):
+    print(j,end='')
+  print('')
+  space-=2

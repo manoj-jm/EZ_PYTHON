@@ -177,6 +177,25 @@ def rightview(root): # sir's method
         q.append(curr.right)
   
   
+def zigzag(root):
+  if root is None:
+    return 
+  # q = [root]
+  # polarity = 1
+  # st = []
+  # q.append(None)
+  # while len(q)>0:
+  #   curr = q.pop(0)
+  #   if curr == None:
+  #     if len(q)==0:  
+  #       break
+  #     else:
+  #       if polarity == 1:
+  #         print(q)
+  #         polarity *=-1
+  #       else:
+  #         st.append(q[0])
+
 
 if __name__ == "__main__":
   root = node(1)
