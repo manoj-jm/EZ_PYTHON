@@ -181,6 +181,20 @@ for i in range(n):
 print(18 , end='\n')
 n=4
 space = 2 * (n -1)
+for i in range(n,-1,-1):
+  for j in range(i,0,-1):
+    print(j,end='')
+
+  for k in range(0,spa,-6):
+    print(" " * k ,end='')
+
+  for j in range(i,0,-1):
+    print(j,end='')
+  print('')
+  space-=2
+
+  n=4
+space = 2 * (n -1)
 for i in range(1,n+1):
   for j in range(1,i+1):
     print(j,end='')
