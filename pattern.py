@@ -275,5 +275,16 @@ for i in range(num):
   print('')
 
 
+#pattern 21
+print("pattern 21 \n")
+n = 4
+for i in range(2*n):
+  for j in range(2*n - 1):
+    top , left , bottom , right = i , j ,(2*n -2)-i,(2*n -2)-j
+    res = min(min(top,bottom),min(left,right))
+    print(n-res,end=' ')
+
+  print('')
+
 
 
