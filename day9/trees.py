@@ -178,23 +178,49 @@ def rightview(root): # sir's method
   
   
 def zigzag(root):
-  if root is None:
-    return 
-  # q = [root]
-  # polarity = 1
-  # st = []
-  # q.append(None)
-  # while len(q)>0:
-  #   curr = q.pop(0)
-  #   if curr == None:
-  #     if len(q)==0:  
-  #       break
-  #     else:
-  #       if polarity == 1:
-  #         print(q)
-  #         polarity *=-1
-  #       else:
-  #         st.append(q[0])
+  s = []
+  q =[root]
+  q.append(None)
+  while len(q)>0:
+    curr = q.pop(0)
+    if curr == None:
+      if len(q)==0:
+        break
+      else:
+        print()
+        q.append(None)
+        s.append(None)
+    else:
+      print(curr.value,end='')
+      s.append(curr.value)
+      if curr.left != None:
+        q.append(curr.left)
+      if curr.right !=None:
+        q.append(curr.right)
+
+  print(s)
+  revstack = []
+  res = []
+  polarised = 0
+  for i in s:
+    if polarised == 0:
+      if i == None:
+        polarised *=1
+      else:
+        res.append(i)
+    else:
+      while i!=None:
+        revstack.append(i)
+        print(revstack)
+      else:
+        while len(revstack)==0:
+          res.append(revstack.pop())
+
+        polarised *=0
+  print('zigzag')
+  print(res)
+
+        
 
 
 if __name__ == "__main__":
@@ -234,3 +260,5 @@ if __name__ == "__main__":
   leftview(root)
   print('\nright veiw')
   rightview(root)
+
+  print(zigzag(root))
