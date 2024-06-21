@@ -44,6 +44,7 @@ stack_dfs = []
 sr = int(input("enter the source : "))
 print("Traversing of graph using DFS")
 dfs(graph,sr,visited_arr,stack_dfs)
+
 print("Traversing of graph using BFS")
 bfs(graph,sr)
 
