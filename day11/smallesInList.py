@@ -7,4 +7,9 @@ for i in li:
     break    
   
 
-    
+result = 1
+for i in li:
+  if result == i:
+    result+=1
+
+print(result)
