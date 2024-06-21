@@ -86,7 +86,7 @@ def inorder(root):
   if root is None:
     return
   inorder(root.left)
-  print(root.val)
+  print(root.val , end=' ')
   inorder(root.right)
 
 if __name__ == "__main__":
