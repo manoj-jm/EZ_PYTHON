@@ -15,9 +15,6 @@ def bfs(graph,s):
         q.append(i[1])
         v[i[1]]=True
 
-
-
-
 def dfs(graph,src,visited_arr,stack_dfs):
   if visited_arr[src] == False:
     stack_dfs.append(src)
