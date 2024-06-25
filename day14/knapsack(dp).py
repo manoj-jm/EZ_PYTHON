@@ -1,7 +1,6 @@
 # job_profit = { 'j1':20,'j2':40,'j3':10,'j4':30,'j5':50}
 # job_deadline = {'j1':2,'j2':1,'j3':2,'j4':3,'j5':1}
 
-
 # def calc_max(p,w,c,n):
 #   if n==0 or c == 0:
 #     return 0
