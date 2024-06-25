@@ -5,7 +5,7 @@ import math as m
 p = [5,10,15,7,8,9,4]
 w = [1,3,5,4,1,3,2]
 
-weight = int(input("enter the max weight of knapsack : "))
+# weight = int(input("enter the max weight of knapsack : "))
 
 p_w = {}
 #p/w 
@@ -32,9 +32,9 @@ n = len(L)
 
 
 #current weight 
-curr_w = 0
-for i in range(len(L)):
-  if curr_w < weight : 
-    curr_w += L[i][1]
+# curr_w = 0
+# for i in range(len(L)):
+#   if curr_w < weight : 
+#     curr_w += L[i][1]
   
-print(m.ceil(curr_w))
+# print(m.ceil(curr_w))
