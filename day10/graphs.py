@@ -26,6 +26,7 @@ def dfs(graph,src,visited_arr,stack_dfs):
   print(stack_dfs.pop())
 
 #dict to store the graph in the form of tuple (start,end,weight )
+# adjacentency list (list of list)
 graph = {
   1:[(1,2,0),(1,3,0)],
   2:[(2,1,0),(2,7,0)],
