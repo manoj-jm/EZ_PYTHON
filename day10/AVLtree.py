@@ -5,6 +5,7 @@ class Node:
         self.right = None
         self.val = key
 
+#best first search
 def bst(val,root):
     if root is None:
         return Node(val)
