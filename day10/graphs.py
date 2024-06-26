@@ -1,4 +1,4 @@
-#traversal of graph 
+#traversal of graph  : graph is set of vertices and edges 
 # 1.DFS
 # 2.BFS
 
