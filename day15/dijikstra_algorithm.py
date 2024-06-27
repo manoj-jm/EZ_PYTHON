@@ -1,15 +1,34 @@
-# dijikstra algorithm
-
-adjacent_matri = [
-  # 0 1 2 3 4 5 6 7 8
-   [0,4,-1,-1,-1,-1,-1,8,-1]# 0
-[4,0,8,-1,-1,-1,11,-1]# 1
-[-1,8,0,7,-1,5,-1,-1,2]# 2
-[-1,-1,7,9,14,-1,-1,-1]# 3
-[-1,-1,-1,9,-1,10,-1,-1]# 4
-[-1,-1,4,14,10,-1,2,-1,-1]# 5
-[-1,-1,-1,-1,-1,,-1,-1 ]# 6
-[-1,-1,-1,-1,-1,-1,-1,-1]# 7
-[-1,-1,-1,-1,-1,-1,-1,-1]# 8
-
+# dijikstra algorithm using adjacency matrixx
+g= [
+    [0, 7, False, False, False, False, False, 2, False, False],
+    [7, 0, 4,False, False, False, 5, False, False, False],
+    [False, 4, 0, False, False, False, False, 8, False, False],
+    [False,False, False, 0, 6, 8, 3, 3, False, False],
+    [False, False, False, 6, 0, False, False, 6, 8, False],
+    [5, False, False, 8, False, 0, False, False, False, False],
+    [False, False, False, 3, False, False, 0, False, 9, 2],
+    [2, False, 8, 3, 6, False, False, 0, False, False],
+    [False, False, False, False, 8, False, 9, False, 0, False],
+    [False, False, False, False, False, False, 2, False, False, 0],
+    
 ]
+
+
+temp={}
+for i in range(len(g)):
+    temp[i]=float('inf')
+
+dist=[float("inf")]*len(g)
+temp[0]=0
+
+while len(temp)>0:
+    min_val=min(temp.values())
+    min_key=min(temp,key=temp.get)
+    temp.pop(min_key)
+    dist[min_key]=min_val
+    for j in range(len(g[min_key])):
+        if g[min_key][j]!=False and g[min_key][j]!=0:
+            new_dist=min_val+g[min_key][j]
+            if j in temp.keys() and temp[j]>new_dist:
+                temp[j]=new_dist
+print(dist)
