@@ -1,7 +1,5 @@
 import sys
 
-
-
 def cost(curr,visited,graph,dp):
   n = len(graph)
   if  len(visited) == n:
@@ -19,7 +17,7 @@ def cost(curr,visited,graph,dp):
       new_visit = visited+[i]
       new_cost = graph[curr][i] + cost(i,new_visit,graph,dp)
       m = min(m,new_cost)
-    dp[(curr,visit)]=m
+  dp[(curr,visit)]=m
 
   return m
 
@@ -30,9 +28,9 @@ graph = [
   [4,0,2,3,8],
   [7,2,0,3,4],
   [5,3,3,0,6],
-  [5,8,3,6,0]
+  [5,8,4,6,0]
 ]
 
-n = len(graph)
+# n = len(graph)
 dp = {}
 print("minimum cost = ", cost(0,[0],graph,dp))
