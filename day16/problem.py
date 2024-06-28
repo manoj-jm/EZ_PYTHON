@@ -12,3 +12,6 @@ if p in val:
   print(val.index(p))
 
     
+
+# LPS ARRAY
+# KMP ALGORITHM
