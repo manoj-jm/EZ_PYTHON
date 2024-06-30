@@ -13,7 +13,7 @@ start = path[0][0]
 i = 0
 j=0
 print(start)
-sum+=start
+sum=start
 while i<n and j <m : 
   if path[i][j+1]< path[i+1][j]:
     j+=1
