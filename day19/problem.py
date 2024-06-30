@@ -17,22 +17,22 @@ sum=start
 while i<n and j <m : 
   if path[i][j+1]< path[i+1][j]:
     j+=1
-    print(path[i][j])
+    # print(path[i][j])
     sum+=path[i][j]
   else:
     i+=1
-    print(path[i][j])
+    # print(path[i][j])
     sum+=path[i][j]
 
 if i==n:
   while j<m:
     j+=1
-    print(path[i][j])
+    # print(path[i][j])
     sum+=path[i][j]
 elif j==m:
   while i<n:
     i+=1
-    print(path[i][j])
+    # print(path[i][j])
     sum+=path[i][j]
 
 print(sum, "value of i and j : " ,i , " ", j)
