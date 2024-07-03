@@ -6,6 +6,6 @@ for i in inp_list:
   li[i-1]+=1
 
 print(li)
-
+# print the elements on there occurence times 
 
 
