@@ -10,7 +10,7 @@ def is_safe(stalls, k, min_dist):
                 return True
     return False
 
-def aggressive_cows(stalls, k):
+def aggressive_cows(stalls, k): 
     stalls.sort()
     low = 1  # Minimum possible distance
     high = stalls[-1] - stalls[0]  # Maximum possible distance
