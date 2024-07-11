@@ -30,3 +30,5 @@ def aggressive_cows(stalls, k):
 stalls = [1, 2, 4, 8, 9]
 k = 3
 print(aggressive_cows(stalls, k)) 
+
+
