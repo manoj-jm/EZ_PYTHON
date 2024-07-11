@@ -1,11 +1,10 @@
-inp_list = list(map(int,input().split()))
-k = int(input())
+arr = [ -1 , 4 , 7 , 2]
 
-li = [0]*k
-for i in inp_list:
-  li[i-1]+=1
+# cumulative sum of an arr
+carr = []
+s = 0
+for i in range(0,len(arr)):
+  s = sum(arr[:i+1])
+  carr.append(s)
 
-print(li)
-# print the elements on there occurence times 
-
-
+print(carr)
